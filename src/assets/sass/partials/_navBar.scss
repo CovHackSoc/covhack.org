@@ -1,0 +1,175 @@
+nav {
+  //Mobile first
+  visibility: hidden;
+  background-color: rgba($primary-colour, 0.7);
+  font-size: 1em;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+
+  h1 {
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+  }
+
+  a {
+    padding: 2em;
+    color: white;
+    border: none;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:hover {color: white;}
+  }
+
+  // Select the title
+  a:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //The sticker to the left of the navbar title
+    img {
+      max-height: 2em;
+      //max-width: 2em;
+      padding-right: .2em;
+    }
+  }
+
+  //Desktop
+  @include breakpoint2(desktop) {
+    visibility: visible;
+    height: auto;
+    padding: 0em;
+    a {padding: 0em;}
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    //padding-right: 10.5em; //This was to move it out of the way of the MLH badge
+
+    a:not(:first-child) {
+      padding: 1em .7em;
+      margin-left: .5em;
+      margin-right: .5em;
+    }
+
+    //Select the links but not the title
+    a:not(:first-child):hover {
+      background-color: rgba($primary-colour, 0.8);
+    }
+
+    // Select the title
+    a:first-child {
+      cursor: pointer;
+      font-size: 1.25em;
+      margin-right: auto;
+      margin-left: 1em;
+
+      //Transition out
+      transition: transform .15s ease-out, opacity .15s ease-out ;
+      transform: translateX(-20px);
+
+      //Starts out invisible
+      opacity: 0;
+    }
+  }
+}
+
+.nav-visible {
+  background-color: rgba(darken($primary-colour, 10%), 0.9);
+  a:first-child {
+    //Transition in
+    transition: transform .3s ease, opacity .3s ease;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.nav-link-alt {
+  padding: .5em .7em !important;
+  background-color: white;
+  color: $primary-colour;
+  border-radius: 7px;
+
+  &:hover {
+    background-color: white !important;
+    color: $primary-colour;
+  }
+}
+
+//Clean this up a bit
+
+//Use a nice animated hamburger
+#mobile-nav-btn {
+  @include breakpoint2(desktop) {
+    visibility: hidden;
+  }
+
+  z-index: 101;
+  position: fixed;
+  top:0px;
+  right:0px;
+
+  display: flex;
+  align-items: center;
+
+  margin: .7em;
+  width: 2em;
+  height: 2em;
+
+  div, div:before, div:after {
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    background-color: darken($primary-colour, 20%);
+    border-radius: 1em;
+    content: '';
+  }
+
+  div, div:before, div:after {
+    //Transition out
+    transition: transform .15s ease-out, background-color .1s ease-out ;
+  }
+
+  div:before {
+    position: absolute;
+    bottom: .8em;
+  }
+
+  div:after {
+    position: absolute;
+    top: .8em;
+  }
+}
+
+.mobile-nav-btn-clicked {
+  div:before {
+    transform-origin: center;
+    transform: translate(0px, 13px) rotate(45deg);
+    background-color: tomato !important;
+  }
+
+  div:after {
+    transform-origin: center;
+    transform: translate(0px, -13px) rotate(-45deg) ;
+    background-color: tomato !important;
+  }
+
+
+  div {
+    background: rgba(white, 0) !important;
+  }
+
+  nav{visibility: visible;}
+}

@@ -1,0 +1,19 @@
+//Modules
+@import 'modules/vars';
+@import 'modules/breakpoits';
+@import 'modules/fadeIn';
+@import 'modules/justifyCenter';
+
+// Base styles
+@import 'base';
+
+// Partials
+@import 'partials/header';
+@import 'partials/btn';
+@import 'partials/sectionStyle1';
+@import 'partials/faq-grid';
+@import 'partials/navBar';
+@import 'partials/footer';
+@import 'partials/text-grid';
+@import 'partials/table';
+@import 'partials/map-container';

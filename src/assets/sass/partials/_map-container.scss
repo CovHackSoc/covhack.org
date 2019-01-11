@@ -1,0 +1,55 @@
+.static-image {
+  background: $primary-colour;
+  background-position: center;
+  background-size: cover;
+  background-attachment:fixed;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+}
+
+.marker {
+  background-color: $primary-colour;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 400px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  background-color: $light-colour !important;
+  padding: 10px 20px !important;
+
+  p {
+    text-align: left;
+  }
+}
+
+.pin2 {
+  box-sizing:  border-box;
+  width: 22px;
+  height: 22px;
+  background-color: $light-colour;
+  border-radius: 50%;
+  border: 7px solid $primary-colour;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 9px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 16px solid $primary-colour;
+  }
+}

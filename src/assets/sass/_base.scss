@@ -1,0 +1,70 @@
+//Resets
+html, body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width:100%;
+  height:100%;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-weight: normal;
+  margin: 0px;
+  padding: 0px;
+}
+
+//Base styles
+body {
+  background: $primary-colour;
+  font-family: $font-families;
+  z-index: 1;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+p {
+  font-weight: normal;
+  padding: .5em 0;
+  font-size: .9em;
+  line-height:24px;
+}
+
+a {
+  transition: background-color .5s;
+  color: $link-colour;
+  text-decoration: none;
+  border-bottom: 1.2px dashed darken($link-colour, 10%);
+  border-bottom-style: dotted;
+}
+
+a:hover {
+  color: darken($link-colour, 30%);
+  border-bottom: 1.2px dashed $link-colour, 10%;
+  text-decoration: none;
+}
+
+::selection { background: $contrast-colour; }
+
+.inner {
+  @include justifyCenter;
+}
+
+.body-noscroll {
+  overflow: hidden;
+}

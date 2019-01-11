@@ -1,0 +1,19 @@
+/* Borrowed from https://gist.github.com/imkevinxu/4401674 - Thanks!*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1.8s forwards;
+}

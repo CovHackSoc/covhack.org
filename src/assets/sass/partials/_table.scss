@@ -1,0 +1,31 @@
+table {
+  width: 80%;
+  margin: 0px auto;
+  text-align: left;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  @include breakpoint(medium) {
+    width: 100%;
+  }
+
+  th, td {
+    border-top: 1px solid rgba(grey, 0.2);
+    padding: 1em 2em;
+  }
+
+  th {
+    font-weight: bold;
+    color: darken($darkText, 10%);
+
+    border-bottom: 2px solid rgba(grey, 0.4);
+  }
+
+  td {
+    color: $lightText;
+  }
+
+  td:nth-child(1) {
+  font-weight: bold;
+  }
+}

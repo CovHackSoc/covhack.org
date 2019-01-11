@@ -1,0 +1,55 @@
+footer {
+  @include justifyCenter;
+  $footerIconSpacing: .8em;
+  width: 100vw;
+  padding-top: 1em;
+  padding-bottom: .5em;
+  background: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  i {
+    transition: color .5s;
+    font-size: 2em;
+    margin-right: $footerIconSpacing;
+  }
+  i:hover {
+    color: $primary-colour;
+    cursor: pointer;
+  }
+  //Set colours for fa logos
+  .fa-facebook-f {
+    color: #4267B2;
+  }
+  .fa-twitter {
+    color: #1DA1F2;
+  }
+  .fa-discord {
+    color: #7289DA;
+  }
+  .fa-slack-hash {
+    color: #573753;
+  }
+  .fa-github {
+    color: #24292e;
+  }
+  .fa-envelope-open {
+    color: black;
+  }
+  .footer-logo-image {
+    height: 2em;
+    width: auto;
+    margin-right: $footerIconSpacing;
+    margin-bottom: 1em;
+  }
+  p  {
+    color: $darkText;
+    font-weight: normal;
+    padding-bottom: .4em;
+    width: 100%;
+    text-align: center;
+    flex-basis: 100%;
+    font-size: .8em;
+  }
+}

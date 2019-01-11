@@ -1,0 +1,37 @@
+.style1 {
+  background-color: $light-colour;//#FBFBFB;
+  border-bottom: 2px solid #DBDBDB;
+
+  padding-top: 1.5em;
+  padding-bottom: 3em;
+
+  h1, h2, h3, h4 {
+    color:$darkText;
+    font-weight: normal;
+    padding: 1em 0px 1em 0px;
+    font-size: 1.7em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3, h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  p {
+    color:$lightText;
+    font-size: 1em;
+  }
+
+  .transport-icons {
+    i {
+      padding-right: .2em;
+      padding-bottom: .5em;
+      font-size: 1.3em;
+      color: darken($primary-colour, 10%);
+    }
+  }
+}

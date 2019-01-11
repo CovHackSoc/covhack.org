@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CovHack</title>
+
+    <!-- Font Awesome -->
+    <link href="assets/css/fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Mapbox Scripts -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+
+  </head>
+  <body>
+    <div href="#" id="mobile-nav-btn">
+      <div></div>
+    </div>
+
+    <nav>
+      <a data-scroll-to-id="header">
+        <img src="assets/images/covhack-square-logo-bg.png" alt="CovHack Sticker" />
+        <h1>CovHack <span>2019</span></h1>
+      </a>
+
+      <a href="#" data-scroll-to-id="about">About</a>
+      <a href="#" data-scroll-to-id="sponsors">Sponsors</a>
+      <a href="#" data-scroll-to-id="faq">FAQs</a>
+      <a href="#" data-scroll-to-id="contact">Contact</a>
+      <a href="#" class="nav-link-alt"><i class="fas fa-ticket-alt"></i> Get Tickets</a>
+    </nav>
+
+    <section class="header" id="header">
+      <div class="fadeIn header-full header-badge">
+        <img src="assets/images/covhack-square-logo.png" alt="CovHack Sticker" />
+      </div>
+      <div class="header-full fadeIn">
+        <h1>CovHack <span>2019</span></h1/>
+      </div>
+      <div class="header-full fadeIn">
+        <h2>9<sup>th</sup>-10<sup>th</sup> March 2019</h2>
+      </div>
+      <a class="btn btn-icon-alt fadeIn" href="#"><i class="fas fa-ticket-alt"></i>Get Tickets</a>
+      <a class="btn btn-icon fadeIn" href="#" data-scroll-to-id="about"><i class="fas fa-chevron-down"></i>Learn More</a>
+    </section>
+
+    <section class="style1" id="about">
+      <div class="inner">
+        <h1>Welcome to CovHack 2019!</h1>
+        <p>Primum Theophrasti, <a href="#">Strato link</a>, physicum se voluit; Illis videtur, qui illud non dubitant bonum dicere. Praeteritis, inquit, gaudeo. Duo Reges: constructio interrete. Quid censes in Latino fore. Quid censes in Latino fore?</p>
+        <h2>Detail:</h2>
+        <div class="text-grid">
+          <div class="text-grid-item">
+            <h3>One</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante Aristippus,  consectetur adipiscing elit. Nam ante Aristippus, et ille melius. Haec para/doca illi, nos admirabilia dicamus. Si longus, levis dictata sunt. Quis negat? Minime vero istorum quidem, inquit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante Aristippus, et <a href="">ille melius</a>. Haec para/doca illi, nos admirabilia dicamus. Si longus, levis dictata sunt. Quis negat? Minime vero istorum quidem, inquit..</p>
+          </div>
+          <div class="text-grid-item">
+            <h3>Two</h3>
+            <p>TLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante Aristippus, et ille melius. Haec para/doca illi, nos admirabilia dicamus. Si longus, levis dictata sunt. Quis negat? Minime vero istorum quidem, inquit.Lorem ipsum dolor sit amet, <a href="">consectetur</a> adipiscing elit. Nam ante Aristippus, et ille melius. Haec para/doca illi, nos admirabilia dicamus. Si longus, levis dictata sunt. Quis negat? Minime vero istorum quidem, inquit.</p>
+          </div>
+          <div class="text-grid-item">
+            <h3>Venue</h3>
+            <p>We are hosting the event in the famous EC building, one of the newset buildings on campus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante Aristippus, et <a href="">ille melius</a>. Haec para/doca illi, nos admirabilia dicamus. Si longus, levis dictata sunt. Quis negat? Minime vero istorum quidem, inquit.</p>
+          </div>
+          <div class="text-grid-item">
+            <!-- Not sure why I put this here...  -->
+            <img style="width:50%; display:block; margin:0px auto;" src="assets/images/covhack-sticker.png" alt="CovHack Sticker" />
+          </div>
+        </div>
+        <h2>Where:</h2>
+        <p>We will be hosting he hackathon in the Enginnering & Computing Building on our Campus.(Add a picture? And the address..) </p>
+        <p class="transport-icons">
+          <i class="fas fa-car"></i> Driving instructions<br/>
+          <i class="fas fa-bus-alt"></i> Bus<br/>
+          <i class="fas fa-train"></i> Coventry Station is 2:30 from London<br/>
+          <!--<i class="fas fa-walking"></i><br/>
+          <i class="fas fa-bicycle"></i><br/>-->
+        </p>
+      </div>
+    </section>
+
+    <section class="map-container">
+      <div id='map'></div>
+    </section>
+
+    <section class="style1">
+      <div class="inner">
+        <h2>More stuff</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante Aristippus, et ille melius. Haec para/doca illi, nos admirabilia dicamus. Si longus, levis dictata sunt. Quis negat? Minime vero istorum quidem, inquit. </p>
+        <h2>Schedule:</h2>
+        <table>
+          <tr>
+            <th>Time</th>
+            <th>Event</th>
+          </tr>
+          <tr>
+            <td>1pm</td>
+            <td>Some event at 1pm</td>
+          </tr>
+          <tr>
+            <td>1pm</td>
+            <td>Some event at 1pm</td>
+          </tr>
+          <tr>
+            <td>1pm</td>
+            <td>Some event at 1pm</td>
+          </tr>
+          <tr>
+            <td>1pm</td>
+            <td>Some event at 1pm</td>
+          </tr>
+          <tr>
+            <td>1pm</td>
+            <td>Some event at 1pm</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="style1" style="background: white;"  id="sponsors">
+      <div class="inner">
+        <h2>Sponsors</h2>
+        <p>Check back soon for details on our sponsors!</p>
+        <h3>Partners:</h3>
+        <p>CUSU</p>
+      </div>
+    </section>
+
+    <section class="faq-grid" id="faq">
+      <h2>FAQs</h2>
+      <div class="faq-grid-item">
+        <h3>Title</h3>
+        <p>The body text of the grid element item place holder text example test.</p>
+      </div>
+      <div class="faq-grid-item">
+        <h3>Title</h3>
+        <p>The body text of the grid element item place holder text example test.</p>
+      </div>
+      <div class="faq-grid-item">
+        <h3>Title</h3>
+        <p>The body text of the grid element item place holder text example test.</p>
+      </div>
+      <div class="faq-grid-item">
+        <h3>Title</h3>
+        <p>The body text of the grid element item place holder text example test.</p>
+      </div>
+      <div class="faq-grid-item">
+        <h3>Title</h3>
+        <p>The body text of the grid element item place holder text example test.</p>
+      </div>
+      <div class="faq-grid-item">
+        <h3>Title</h3>
+        <p>The body text of the grid element item place holder text example test.</p>
+      </div>
+      <div class="faq-grid-item">
+        <h3>Title</h3>
+        <p>The body text of the grid element item place holder text example test.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Find us on socials, Github or email:</p>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-discord"></i>
+      <i class="fab fa-slack-hash"></i>
+      <i class="fab fa-github"></i>
+      <i class="fas fa-envelope-open"></i>
+      <p>Our partners:</p>
+      <img src="assets/images/cusu-logo.png" class="footer-logo-image" alt="CUSU logo" />
+      <!--<img src="assets/images/mlh-logo-color.svg" class="footer-logo-image" alt="MLH logo" />-->
+      <p>&copy; 2018 Coventry University Hackathon Society</p>
+    </footer>
+    <!--
+    <a id="mlh-trust-badge-1" style="border-bottom:none;display:none;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/eu-2019/events?utm_source=eu-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
+    <a id="mlh-trust-badge-2" style="border-bottom:none;display:none;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-gray.svg" alt="Major League Hacking 2019 Hackathon Season" style="width:100%"></a>
+    -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

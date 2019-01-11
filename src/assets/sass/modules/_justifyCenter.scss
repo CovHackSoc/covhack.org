@@ -1,0 +1,14 @@
+@mixin justifyCenter() {
+  padding-left: 15% !important;
+  padding-right: 15% !important;
+  width: 100% !important;
+
+  @include breakpoint(medium) {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+	}
+  @include breakpoint(small) {
+    padding-left: 7% !important;
+    padding-right: 7% !important;
+	}
+}

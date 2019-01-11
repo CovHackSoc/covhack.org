@@ -1,0 +1,43 @@
+.header {
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+  background-color: $primary-colour;
+  background-image: url('../images/overlay.png'), url('../images/pattern-size1.svg');
+  background-attachment: fixed, fixed;
+  background-size: auto, cover;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  text-align: center;
+
+  h1 {
+    color: white;
+    font-size: 3.3em;
+
+    span {
+      font-weight: lighter;
+    }
+  }
+
+  h2 {
+    color: #d1e5f9;
+    font-weight: lighter;
+    font-size: 1.5em;
+    padding:25px 0px 40px 0px;
+  }
+
+  .header-full {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .header-badge {
+    padding-bottom: 1.5em;
+    img {
+      max-width: 50%;
+      max-height: 50%;
+    }
+  }
+}
