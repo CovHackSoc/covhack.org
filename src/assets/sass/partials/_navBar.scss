@@ -56,7 +56,7 @@ nav {
     justify-content: flex-end;
     align-items: center;
 
-    //padding-right: 10.5em; //This was to move it out of the way of the MLH badge
+    padding-right: 2em;//10.5em; //Increase this to move out of the way of the MLH badge
 
     a:not(:first-child) {
       padding: 1em .7em;

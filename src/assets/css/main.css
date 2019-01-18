@@ -21,9 +21,8 @@ html, body {
   height: 100%;
   font-size: 16px; }
 
-*, *:before, *:after {
+* {
   box-sizing: inherit;
-  font-weight: normal;
   margin: 0px;
   padding: 0px; }
 
@@ -249,7 +248,8 @@ nav {
       padding: 0em;
       flex-direction: row;
       justify-content: flex-end;
-      align-items: center; }
+      align-items: center;
+      padding-right: 2em; }
       nav a {
         padding: 0em; }
       nav a:not(:first-child) {
