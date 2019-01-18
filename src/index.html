@@ -9,6 +9,10 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
 
+    <!-- ti.to widget scripts -->
+    <script src='https://js.tito.io/v1' async></script>
+    <link rel="stylesheet" type="text/css" href='assets/css/tito_test.css' />
+
     <!-- Styles -->
     <link href="assets/css/main.css" rel="stylesheet">
 
@@ -30,8 +34,7 @@
       <a href="#" data-scroll-to-id="about">About</a>
       <a href="#" data-scroll-to-id="sponsors">Sponsors</a>
       <a href="#" data-scroll-to-id="faq">FAQs</a>
-      <a href="#" data-scroll-to-id="contact">Contact</a>
-      <a href="#" class="nav-link-alt"><i class="fas fa-ticket-alt"></i> Get Tickets</a>
+      <a href="#" class="nav-link-alt" data-scroll-to-id="tickets"><i class="fas fa-ticket-alt"></i> Get Tickets</a>
     </nav>
 
     <section class="header" id="header">
@@ -44,7 +47,7 @@
       <div class="header-full fadeIn">
         <h2>9<sup>th</sup>-10<sup>th</sup> March 2019</h2>
       </div>
-      <a class="btn btn-icon-alt fadeIn" href="#"><i class="fas fa-ticket-alt"></i>Get Tickets</a>
+      <a class="btn btn-icon-alt fadeIn" href="#" data-scroll-to-id="tickets"><i class="fas fa-ticket-alt"></i>Get Tickets</a>
       <a class="btn btn-icon fadeIn" href="#" data-scroll-to-id="about"><i class="fas fa-chevron-down"></i>Learn More</a>
     </section>
 
@@ -55,8 +58,9 @@
         <h2>Detail:</h2>
         <div class="text-grid">
           <div class="text-grid-item">
-            <h3>One</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante Aristippus,  consectetur adipiscing elit. Nam ante Aristippus, et ille melius. Haec para/doca illi, nos admirabilia dicamus. Si longus, levis dictata sunt. Quis negat? Minime vero istorum quidem, inquit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ante Aristippus, et <a href="">ille melius</a>. Haec para/doca illi, nos admirabilia dicamus. Si longus, levis dictata sunt. Quis negat? Minime vero istorum quidem, inquit..</p>
+            <h3>What is a Hackathon?</h3>
+            <p>There are many definitions, but we like MLHs:<p>
+            <p>A hackathon is best described as an “invention marathon”. Anyone who has an interest in technology attends a hackathon to learn, build & share their creations over the course of a weekend in a relaxed and welcoming atmosphere. You don’t have to be a programmer and you certainly don’t have to be majoring in Computer Science.</p>
           </div>
           <div class="text-grid-item">
             <h3>Two</h3>
@@ -71,7 +75,7 @@
             <img style="width:50%; display:block; margin:0px auto;" src="assets/images/covhack-sticker.png" alt="CovHack Sticker" />
           </div>
         </div>
-        <h2>Where:</h2>
+        <h2>Find Us</h2>
         <p>We will be hosting he hackathon in the Enginnering & Computing Building on our Campus.(Add a picture? And the address..) </p>
         <p class="transport-icons">
           <i class="fas fa-car"></i> Driving instructions<br/>
@@ -133,33 +137,66 @@
     <section class="faq-grid" id="faq">
       <h2>FAQs</h2>
       <div class="faq-grid-item">
-        <h3>Title</h3>
-        <p>The body text of the grid element item place holder text example test.</p>
+        <h3>So, what's a Hackathon?</h3>
+        <p>Good question! We covered this in our about section <a href="#" data-scroll-to-id="about">here</a><p>
       </div>
       <div class="faq-grid-item">
-        <h3>Title</h3>
-        <p>The body text of the grid element item place holder text example test.</p>
+        <h3>Can I attend?</h3>
+        <p>All students (even those not at Coventry University) and recent graduates (within the last year) can attend!</p>
       </div>
       <div class="faq-grid-item">
-        <h3>Title</h3>
-        <p>The body text of the grid element item place holder text example test.</p>
+        <h3>How much does it cost?</h3>
+        <p>The event is completely free! Everything is paid for by our wonderful sponsors!</p>
       </div>
       <div class="faq-grid-item">
-        <h3>Title</h3>
-        <p>The body text of the grid element item place holder text example test.</p>
+        <h3>What about Sleeping?</h3>
+        <p>There will be a few places setup for sleeping around the venue.</p>
       </div>
       <div class="faq-grid-item">
-        <h3>Title</h3>
-        <p>The body text of the grid element item place holder text example test.</p>
+        <h3>Will there be travel reimbursements?</h3>
+        <p>At this time, we can not provide travel reimbursements. </p>
       </div>
       <div class="faq-grid-item">
-        <h3>Title</h3>
-        <p>The body text of the grid element item place holder text example test.</p>
+        <h3>I don't have a team!</h3>
+        <p>Don't worry, we'll have a team building session at the start of the hackathon.
+</p>
       </div>
       <div class="faq-grid-item">
-        <h3>Title</h3>
-        <p>The body text of the grid element item place holder text example test.</p>
+        <h3>I have a ticket but can’t make it!</h3>
+        <p>Please send us an email so we can make sure someone else who wants to come can make it to the event!</p>
       </div>
+      <div class="faq-grid-item">
+        <h3>Will there be food and drink?</h3>
+        <p>Yes we aim to provide food, all paid for by sponsors!</p>
+      </div>
+      <div class="faq-grid-item">
+        <h3>Is there a code of conduct?</h3>
+        <p>Yes! We use MLH's code of conduct, you can read it <a href="#">here</a>.</p>
+      </div>
+      <div class="faq-grid-item">
+        <h3>What should I bring?</h3>
+        <p>We highly recommend you bring the following:</p>
+        <ul>
+          <li>A Laptop (or your gaming rig :))</li>
+          <li>A charger</li>
+          <li>Deodorant</li>
+          <li>Toothbrush + Toothpaste</li>
+          <li>A change of clothes</li>
+        </ul>
+      </div>
+      <div class="faq-grid-item">
+        <h3>What if I don’t know how to code?</h3>
+        <p>Not a problem! A hackathon is one of the best places to learn programming, electronics or whatever you want! We'll be running workshops to help you get started as well. <br/>We'll be running a Slack server so you ask for help from people attending if you are stuck as well.</p>
+      </div>
+    </section>
+
+    <section class="style1 inner" id="tickets">
+      <h2>Tickets</h2>
+      <p>It is great that you want to come to CovHack! We will be releasing tickets in 3 waves.</p>
+
+      <br/>
+
+      <tito-widget event="covhack/testevent"></tito-widget>
     </section>
 
     <footer>

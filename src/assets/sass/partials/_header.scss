@@ -3,7 +3,7 @@
   height: 100vh;
   overflow: hidden;
   background-color: $primary-colour;
-  background-image: url('../images/overlay.png'), url('../images/pattern-size1.svg');
+  background-image: url('../images/overlay.png');
   background-attachment: fixed, fixed;
   background-size: auto, cover;
   display: grid;
