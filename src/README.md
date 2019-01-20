@@ -12,3 +12,6 @@ Issues:
 - If the menu is shown then hidden in mobile mode, and the viewport grows to desktop size the menu will remain hidden
 - Body noscroll not working on mobile
 - On mobile in landscape the nav menu is not scrollable and is cut off, the body scrolls instead
+
+Todo:
+- auto hide nav on mobile after clicking a link

@@ -1,19 +1,10 @@
-/* MLH badge colour changing stuff & nav title show and hide on scroll */
+/* Nav animation on scroll */
 $(document).ready(function(){
-  $('#mlh-trust-badge-1').show();
-
   $(document).scroll(function(){
-    if($(document).scrollTop() > ($( window ).height()-100)) {
-      //$('#mlh-trust-badge-2').fadeIn(100, function(){
-      //  $('#mlh-trust-badge-1').hide()
-      //})
-      $('nav').addClass('nav-visible');
-    } else {
-      //$('#mlh-trust-badge-1').show(0, function(){
-      //  $('#mlh-trust-badge-2').fadeOut(100)
-      //})
-      $('nav').removeClass('nav-visible');
-    }
+    if($(document).scrollTop() > ($( window ).height()-100))
+      $('nav').addClass('nav-title-visible');
+    else
+      $('nav').removeClass('nav-title-visible');
   });
 });
 
@@ -35,7 +26,7 @@ var geojson = {
       coordinates: [-1.500086, 52.405313]
     },
     properties: {
-      title: 'Mapbox',
+      title: 'CovHack',
       description: '1 Gulson Rd,<br/> Coventry<br/>CV1 2JH'
     }
   }]
@@ -59,23 +50,19 @@ map.on("load", function () {
 });
 
 /* Scrolling */
-
 // Checks for any a tags with the 'data-scroll-to-id' attribute set
-
 $(document).ready(() => {
-  $('a[data-scroll-to-id]').click(e => {
+  $('a[data-scroll-to-id]').click(() => {
     return false;
   })
 
-  $('a[data-scroll-to-id]').each(function(){
+  $('a[data-scroll-to-id]').each(function() {
     const dataScrollToID = $(this).data("scroll-to-id")
     if(typeof dataScrollToID != 'undefined') {
       const target = $('#'+dataScrollToID);
-
       //Check if the target exists in the DOM
       if (target.length === 1) {
         $(this).click(function(){
-          //TODO: Only use outer height of nav when not in mobile mode
           $('html, body').stop().animate({ scrollTop: ( target.offset().top - 0/*$('nav').outerHeight()*/ ) }, 1000);
         })
       } else {
@@ -83,20 +70,21 @@ $(document).ready(() => {
       }
     }
   });
-
-  console.log('done')
 });
 
-/* Mobile nav button */
+/* Mobile nav */
 $(document).ready(() => {
+  //Hamburger btn animation
   $('#mobile-nav-btn').click(() => {
     $('#mobile-nav-btn').toggleClass('mobile-nav-btn-clicked');
     $('body').toggleClass('body-noscroll');
+    $('nav').toggleClass('mobile-nav-visible');
+  });
 
-    if($('nav').css('visibility') === 'hidden') {
-      $('nav').css('visibility', 'visible');
-    } else {
-      $('nav').css('visibility', 'hidden');
-    }
+  //Close nav on link click
+  $('nav > a').click(() => {
+    $('#mobile-nav-btn').removeClass('mobile-nav-btn-clicked');
+    $('body').removeClass('body-noscroll');
+    $('nav').removeClass('mobile-nav-visible');
   });
 });

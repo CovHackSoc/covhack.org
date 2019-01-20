@@ -1,16 +1,18 @@
 nav {
   //Mobile first
-  visibility: hidden;
-  background-color: rgba($primary-colour, 0.7);
+  height: 0;
+  overflow: hidden;
+  transition: height 0.1s ease-out;
+
+  background-color: $primary-colour;
   font-size: 1em;
   width: 100vw;
-  height: 100vh;
   position: fixed;
   top:0;
   z-index: 100;
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 0 2em;
 
   h1 {
     font-size: 1.2em;
@@ -41,13 +43,13 @@ nav {
     //The sticker to the left of the navbar title
     img {
       max-height: 2em;
-      //max-width: 2em;
       padding-right: .2em;
     }
   }
 
   //Desktop
   @include breakpoint2(desktop) {
+    background-color: rgba($primary-colour, 0.7);
     visibility: visible;
     height: auto;
     padding: 0em;
@@ -55,7 +57,6 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-
     padding-right: 2em;//10.5em; //Increase this to move out of the way of the MLH badge
 
     a:not(:first-child) {
@@ -86,13 +87,24 @@ nav {
   }
 }
 
-.nav-visible {
-  background-color: rgba(darken($primary-colour, 10%), 0.9);
-  a:first-child {
-    //Transition in
-    transition: transform .3s ease, opacity .3s ease;
-    opacity: 1;
-    transform: translateX(0px);
+.mobile-nav-visible {
+  height: 100vh;
+
+  //Prevent the height being set to 100 if the vieport grows past mobile size
+  @include breakpoint2(desktop) {
+    height: auto;
+  }
+}
+
+.nav-title-visible {
+  @include breakpoint2(desktop) {
+    background-color: rgba(darken($primary-colour, 10%), 0.9);
+    a:first-child {
+      //Transition in
+      transition: transform .3s ease, opacity .3s ease;
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
 }
 
@@ -110,7 +122,6 @@ nav {
 
 //Clean this up a bit
 
-//Use a nice animated hamburger
 #mobile-nav-btn {
   @include breakpoint2(desktop) {
     visibility: hidden;
@@ -120,10 +131,8 @@ nav {
   position: fixed;
   top:0px;
   right:0px;
-
   display: flex;
   align-items: center;
-
   margin: .7em;
   width: 2em;
   height: 2em;
@@ -165,7 +174,6 @@ nav {
     transform: translate(0px, -13px) rotate(-45deg) ;
     background-color: tomato !important;
   }
-
 
   div {
     background: rgba(white, 0) !important;
